@@ -24,6 +24,7 @@ names = array.uniq
 end 
 
 def merge_data(keys,data)
-
+keys.each do |name|
+  
 
 end 
