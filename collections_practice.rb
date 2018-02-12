@@ -16,4 +16,31 @@ def remove_non_strings(array)
   end 
 end 
 
-def count_elements()
+def count_elements(array)
+names = array.uniq
+  names.map do |name|
+    name.merge(:count => array.count { |element| element[ :name] == name[:name]})
+  end 
+end 
+
+def merge_data(keys,data)
+  keys.map do |name|
+    name.merge(data[0][name[:first_name]].to_h)
+  end 
+end 
+
+def find_cool(array)
+  array.find_all{ |element| element[:temperature] == "cool"}
+end 
+
+def organize_schools(schools)
+hash = {}
+schools.each do |school,location|
+  if hash.include?(location[:location]) == false
+    hash[location[:location]] = [school]
+  else
+    hash[location[:location]] << school
+  end 
+end
+hash
+end 
