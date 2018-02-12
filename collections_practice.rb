@@ -25,6 +25,6 @@ end
 
 def merge_data(keys,data)
 keys.each do |name|
-  
+  name.merge()
 
 end 
