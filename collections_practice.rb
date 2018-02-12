@@ -18,7 +18,8 @@ end
 
 def count_elements(array)
 names = array.uniq
-names.merge()
+names.map do |name|
+  name.merge(array.count { |item| item[:name] == name[:name] })
 end 
 
 def merge_data(keys,data)
