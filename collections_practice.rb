@@ -24,8 +24,7 @@ names = array.uniq
 end 
 
 def merge_data(keys,data)
-keys.map do |name|
-  name.merge(data[0][name[:first_name]].to_h)
-end 
-
+  keys.map do |name|
+    name.merge(data[0][name[:first_name]].to_h)
+  end 
 end 
