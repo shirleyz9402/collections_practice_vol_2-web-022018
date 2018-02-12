@@ -17,19 +17,8 @@ def remove_non_strings(array)
 end 
 
 def count_elements(array)
-hash = {}  
-  array.each do |names|
-    if hash.include?(names[:name]) == false
-      hash = [{
-        :name => names[:name],
-        :count => array.count { |item| item[:name] == names[:name] }
-      }]
-      if hash.include?(names[:name]) == true
-        names[:count] += 1
-      end 
-    end 
-  end 
-  hash
+names = array.uniq
+names.merge()
 end 
 
 def merge_data(keys,data)
