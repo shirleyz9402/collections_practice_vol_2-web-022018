@@ -19,12 +19,12 @@ end
 def count_elements(array)
 hash = {}  
   array.each do |names|
-    if hash.keys.include?(names[:name]) == false
+    if hash.include?(names[:name]) == false
       hash = [{
         :name => names[:name],
         :count => 1
       }]
-      if hash.keys.include?(names[:name]) == true
+      if hash.include?(names[:name]) == true
         names[:count] += 1
       end 
     end 
