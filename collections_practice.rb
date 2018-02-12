@@ -16,4 +16,19 @@ def remove_non_strings(array)
   end 
 end 
 
-def count_elements()
+def count_elements(array)
+hash = {}  
+count = 1
+  array.each do |names|
+    if hash.keys.include?(names[:name]) == false
+      hash = [{
+        :name => names[:name],
+        :count => count
+      }]
+      if hash.keys.include?(names[:name]) == true
+        count += 1
+      end 
+    end 
+  end 
+  hash
+end 
