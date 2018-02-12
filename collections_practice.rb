@@ -22,7 +22,7 @@ hash = {}
     if hash.include?(names[:name]) == false
       hash = [{
         :name => names[:name],
-        :count => 1
+        :count => array.count { |item| item[:name] == name[:name] }
       }]
       if hash.include?(names[:name]) == true
         names[:count] += 1
