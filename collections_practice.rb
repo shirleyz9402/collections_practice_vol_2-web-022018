@@ -32,3 +32,7 @@ end
 def find_cool(array)
   array.find_all{ |element| element[:temperature] == "cool"}
 end 
+
+def organize_schools(array)
+
+end 
